@@ -13,7 +13,6 @@
 	let fuse: Fuse<ModData> | undefined;
 	let input = '';
 	const updateSearch = debounce(() => {
-		console.log('hello!');
 		if (fuse) {
 			filtered = input ? fuse.search(input).map((x) => mods[x.refIndex]) : mods;
 		}
