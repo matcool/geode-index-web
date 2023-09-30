@@ -7,9 +7,7 @@ async function entryToJson(entry: Entry): Promise<any> {
 }
 
 export async function fetchIndex() {
-    const req = await fetch('https://github.com/geode-sdk/mods/zipball/main', {
-        mode: 'no-cors'
-    });
+    const req = await fetch('https://github.com/geode-sdk/mods/zipball/main');
     const bytes = await req.blob();
 
     const zipFileReader = new BlobReader(bytes);
