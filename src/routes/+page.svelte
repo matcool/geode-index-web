@@ -46,7 +46,7 @@
 	{#await req}
 		<img src="{base}/spinner.svg" alt="spinner" />
 	{:then}
-		<section class="flex flex-col gap-4 md:w-1/3">
+		<section class="flex flex-col gap-4 xl:w-1/3">
 			{#each filtered as mod (mod.id)}
 				<ModCard data={mod} />
 			{/each}

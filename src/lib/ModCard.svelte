@@ -3,7 +3,7 @@
 	export let data: ModData;
 </script>
 
-<article class="cursor-pointer rounded-md bg-white p-4 shadow-md hover:bg-gray-50 md:w-full">
+<article class="cursor-pointer rounded-md bg-white p-4 shadow-md hover:bg-gray-50 xl:w-full">
 	<figure class="flex align-top">
 		<img
 			src={data.logo}
