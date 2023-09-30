@@ -11,10 +11,10 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-			precompress: true,
+			precompress: true
 		}),
 		paths: {
-			base: dev ? '' : process.env.BASE_PATH,
+			base: dev ? '' : process.env.BASE_PATH
 		}
 	}
 };

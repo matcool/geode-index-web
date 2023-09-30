@@ -28,8 +28,8 @@ export async function fetchIndex() {
 
         const match = entry.filename.match(/[\w\-.]+?\/mods-v2\/([\w\-.]+?)\/(.+)/);
         if (match == null) continue;
-        let modId = match[1];
-        let path = match[2];
+        const modId = match[1];
+        const path = match[2];
         modEntries[`${modId}/${path}`] = entry;
     }
 
@@ -47,7 +47,7 @@ export async function fetchIndex() {
                 id,
                 name: modInfoObj.name,
                 logo: logoUrl ?? 'https://raw.githubusercontent.com/geode-sdk/example-mod/main/logo.png',
-                description: modInfoObj.description,
+                description: modInfoObj.description
             });
         }
     }
@@ -55,4 +55,4 @@ export async function fetchIndex() {
     await zipFile.close();
 
     return mods;
-};
+}
