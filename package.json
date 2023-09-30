@@ -15,6 +15,7 @@
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/adapter-static": "^2.0.3",
 		"@sveltejs/kit": "^1.20.4",
+		"@types/lodash.debounce": "^4.0.7",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
 		"autoprefixer": "^10.4.16",
@@ -34,6 +35,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@zip.js/zip.js": "^2.7.29"
+		"@zip.js/zip.js": "^2.7.29",
+		"fuse.js": "^6.6.2",
+		"lodash.debounce": "^4.0.8"
 	}
 }
