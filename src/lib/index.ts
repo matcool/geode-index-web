@@ -1,6 +1,5 @@
 import type { ModData } from '$lib/types';
 import { BlobReader, ZipReader, TextWriter, type Entry, Data64URIWriter } from '@zip.js/zip.js';
-import { dev } from '$app/environment';
 
 async function entryToJson(entry: Entry): Promise<any> {
     const writer = new TextWriter();
@@ -8,7 +7,7 @@ async function entryToJson(entry: Entry): Promise<any> {
 }
 
 export async function fetchIndex() {
-    const req = await fetch(dev ? '/geode-sdk-mods.zip' : 'https://github.com/geode-sdk/mods/zipball/main', {
+    const req = await fetch('https://github.com/geode-sdk/mods/zipball/main', {
         mode: 'no-cors'
     });
     const bytes = await req.blob();
